@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Ceaser Cipher</title>
+		<link rel="stylesheet" href="">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+	</head>
+	<body style="padding-top: 70px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+					<h1 class="display-3">Ceaser Cipher</h1>
+					<form name="form">
+						<label>Message:
+							<input type="text" name="message" value="<%= @message %>" placeholder="Message">
+						</label>
+						<br>
+						<label>Shift By:
+							<input type="number" name="shift" value="<%= @shift %>">
+						</label>
+						<br>
+						<button class="btn btn-success" type="submit" name="submit">Encode</button>
+					</form>
+				
+					<% if !@encodedMessage.nil? %>
+						<br><br><br>
+						<div class="encodedMessage class="h2"">
+							Encoded Message: <span style="color: red"> <%= @encodedMessage %> </span>
+						</div>
+					<% end %>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+	</body>
+</html>
